@@ -1,0 +1,21 @@
+$window-panel: #000000;
+$light-font: #ffffff;
+$button-second: #F4F4F4;
+$window-back-ground: #E5E5E5;
+$dark-font: #333333;
+$task-border-color: #E4E4E4;
+$deadline-timer: #999999;
+$popup-border: #C4C4C4;
+$button-main: #DC0D27;
+
+
+
+@function lighter($color, $tone) {
+  $adjust: 16*$tone;
+  @return adjust-color($color, $red: $adjust, $green: $adjust, $blue: $adjust);
+}
+
+@function darker($color, $tone) {
+  $adjust: -16*$tone;
+  @return adjust-color($color, $red: $adjust, $green: $adjust, $blue: $adjust);
+}
