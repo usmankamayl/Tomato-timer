@@ -30,7 +30,8 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
-    "autoprefixer": "10.4.5"
+    "autoprefixer": "10.4.5",
+    "redom": "^3.29.0"
   },
   "description": ""
 }

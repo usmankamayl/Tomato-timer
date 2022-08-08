@@ -2,7 +2,7 @@ class AddTask {
     constructor(name, counter = 0) {
         this.name = name;
         this.counter = Number(counter);
-        this.id =  Math.random().toString().substring(2, 8) + Date.now().toString().substring(9);
+        //this.id =  Math.random().toString().substring(2, 8) + Date.now().toString().substring(9);
     }
 
     changeName(newName) {

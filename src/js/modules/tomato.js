@@ -1,23 +1,26 @@
 export class Tomato {
-
     tasks = [];
-    constructor(obj) {
+    constructor(page, obj) {
+        if (Tomato._instance) {
+            return Tomato._instance;
+        }
         this.obj = obj;
         this.obj.taskTime = obj.taskTime || 25 ;
         this.obj.pause = obj.pause || 5;
         this.obj.bigPause = obj.bigPause || 15;
-        console.log(this);
+        this.page = page;
+        Tomato._instance = this;
     }
 
-    addTask (task) {
+    addTask (task = {}) {
         this.tasks.push(task);
-        task.id = this.tasks.indexOf(task) + 1;
-        console.log(`задача '${task.name}' добавлена,  id задачи = ${task.id}`)
+        this.page.createTask(task);
     }
 
     activateTask (id) {
-        this.tasks.find(task => task.id = id).status = true;
-        console.log(`задача по id = ${id} активирована`);
+        const activateTask = this.tasks.find(task => task.id = id);
+        activateTask.task.status = true;
+        this.page.setWindowTitle(activateTask.task.title);
     }
 
     startTask () {
@@ -49,6 +52,5 @@ export class Tomato {
     addCounter (id) {
         const task = this.tasks.find(task => task.id === id);
         task.counter ? task.counter += 1 : task.counter = 1;
-        console.log(task.counter, '  task.counter');
     }
 }

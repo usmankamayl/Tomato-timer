@@ -11,105 +11,105 @@
   <title>Tomato timer</title>
 </head>
 <body>
-  <header>
-    <section class="header">
-      <div class="container header__container">
-        <img src="img/svg/noto_tomato.svg" class="header__logo" alt="Tomato image">
-        <h1 class="header__title">Tomato timer</h1>
-      </div>
-    </section>
-  </header>
-  <main>
-    <section class="main">
-      <div class="container main__container">
-        <div class="pomodoro-form window">
-          <div class="window__panel">
-            <p class="window__panel-title">Сверстать сайт</p>
-            <p class="window__panel-task-text">Томат 2</p>
-          </div>
-          <div class="window__body">
-            <p class="window__timer-text">25:00</p>
-            <div class="window__buttons">
-              <button class="button button-primary">Старт</button>
-              <button class="button button-secondary">Стоп</button>
-            </div>
-          </div>
-          <form class="task-form" action="submit">
-            <input type="text" class="task-name input-primary" name="task-name" id="task-name" placeholder="название задачи">
-            <button type="button" class="button button-importance default" aria-label="Указать важность"></button>
-            <button type="submit" class="button button-primary task-form__add-button">Добавить</button>
-          </form>
-        </div>
-        <div class="pomodoro-tasks">
-          <p class="pomodoro-tasks__header-title">
-            Инструкция:
-          </p>
-          <ul class="pomodoro-tasks__quest-list">
-            <li class="pomodoro-tasks__list-item">
-              Напишите название задачи чтобы её добавить
-            </li>
-            <li class="pomodoro-tasks__list-item">
-              Чтобы задачу активировать, выберите её из списка
-            </li>
-            <li class="pomodoro-tasks__list-item">
-              Запустите таймер
-            </li>
-            <li class="pomodoro-tasks__list-item">
-              Работайте пока таймер не прозвонит
-            </li>
-            <li class="pomodoro-tasks__list-item">
-              Сделайте короткий перерыв (5 минут)
-            </li>
-            <li class="pomodoro-tasks__list-item">
-              Продолжайте работать, пока задача не будет выполнена.
-            </li>
-            <li class="pomodoro-tasks__list-item">
-              Каждые 4 периода таймера делайте длинный перерыв (15-20 минут).
-            </li>
-          </ul>
-          <ul class="pomodoro-tasks__quest-tasks">
-            <li class="pomodoro-tasks__list-task important">
-              <span class="count-number">1</span>
-              <button class="pomodoro-tasks__task-text pomodoro-tasks__task-text_active">
-                Сверстать сайт
-              </button>
-              <button class="pomodoro-tasks__task-button"></button>
-              <!-- popup menu -->
-              <div class="burger-popup burger-popup_active">
-                <button class="popup-button burger-popup__edit-button">Редактировать</button>
-                <button class="popup-button burger-popup__delete-button">Удалить</button>
-              </div>
-            </li>
-            <li class="pomodoro-tasks__list-task so-so">
-              <span class="count-number">1</span>
-              <button class="pomodoro-tasks__task-text">
-                Оплатить налоги
-              </button>
-              <button class="pomodoro-tasks__task-button"></button>
-              <!-- popup menu -->
+<!--  <header>-->
+<!--    <section class="header">-->
+<!--      <div class="container header__container">-->
+<!--        <img src="img/svg/noto_tomato.svg" class="header__logo" alt="Tomato image">-->
+<!--        <h1 class="header__title">Tomato timer</h1>-->
+<!--      </div>-->
+<!--    </section>-->
+<!--  </header>-->
+<!--  <main>-->
+<!--    <section class="main">-->
+<!--      <div class="container main__container">-->
+<!--        <div class="pomodoro-form window">-->
+<!--          <div class="window__panel">-->
+<!--            <p class="window__panel-title">Сверстать сайт</p>-->
+<!--            <p class="window__panel-task-text">Томат 2</p>-->
+<!--          </div>-->
+<!--          <div class="window__body">-->
+<!--            <p class="window__timer-text">25:00</p>-->
+<!--            <div class="window__buttons">-->
+<!--              <button class="button button-primary">Старт</button>-->
+<!--              <button class="button button-secondary">Стоп</button>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <form class="task-form" action="submit">-->
+<!--            <input type="text" class="task-name input-primary" name="task-name" id="task-name" placeholder="название задачи">-->
+<!--            <button type="button" class="button button-importance default" aria-label="Указать важность"></button>-->
+<!--            <button type="submit" class="button button-primary task-form__add-button">Добавить</button>-->
+<!--          </form>-->
+<!--        </div>-->
+<!--        <div class="pomodoro-tasks">-->
+<!--          <p class="pomodoro-tasks__header-title">-->
+<!--            Инструкция:-->
+<!--          </p>-->
+<!--          <ul class="pomodoro-tasks__quest-list">-->
+<!--            <li class="pomodoro-tasks__list-item">-->
+<!--              Напишите название задачи чтобы её добавить-->
+<!--            </li>-->
+<!--            <li class="pomodoro-tasks__list-item">-->
+<!--              Чтобы задачу активировать, выберите её из списка-->
+<!--            </li>-->
+<!--            <li class="pomodoro-tasks__list-item">-->
+<!--              Запустите таймер-->
+<!--            </li>-->
+<!--            <li class="pomodoro-tasks__list-item">-->
+<!--              Работайте пока таймер не прозвонит-->
+<!--            </li>-->
+<!--            <li class="pomodoro-tasks__list-item">-->
+<!--              Сделайте короткий перерыв (5 минут)-->
+<!--            </li>-->
+<!--            <li class="pomodoro-tasks__list-item">-->
+<!--              Продолжайте работать, пока задача не будет выполнена.-->
+<!--            </li>-->
+<!--            <li class="pomodoro-tasks__list-item">-->
+<!--              Каждые 4 периода таймера делайте длинный перерыв (15-20 минут).-->
+<!--            </li>-->
+<!--          </ul>-->
+<!--          <ul class="pomodoro-tasks__quest-tasks">-->
+<!--            <li class="pomodoro-tasks__list-task important">-->
+<!--              <span class="count-number">1</span>-->
+<!--              <button class="pomodoro-tasks__task-text pomodoro-tasks__task-text_active">-->
+<!--                Сверстать сайт-->
+<!--              </button>-->
+<!--              <button class="pomodoro-tasks__task-button"></button>-->
+<!--              &lt;!&ndash; popup menu &ndash;&gt;-->
+<!--              <div class="burger-popup burger-popup_active">-->
+<!--                <button class="popup-button burger-popup__edit-button">Редактировать</button>-->
+<!--                <button class="popup-button burger-popup__delete-button">Удалить</button>-->
+<!--              </div>-->
+<!--            </li>-->
+<!--            <li class="pomodoro-tasks__list-task so-so">-->
+<!--              <span class="count-number">1</span>-->
+<!--              <button class="pomodoro-tasks__task-text">-->
+<!--                Оплатить налоги-->
+<!--              </button>-->
+<!--              <button class="pomodoro-tasks__task-button"></button>-->
+<!--              &lt;!&ndash; popup menu &ndash;&gt;-->
 
-            </li>
-            <li class="pomodoro-tasks__list-task default">
-              <span class="count-number">3</span>
-              <button class="pomodoro-tasks__task-text">
-                Проверить валидность
-              </button>
-              <button class="pomodoro-tasks__task-button"></button>
-            </li>
-          </ul>
-          <p class="pomodoro-tasks__deadline-timer">1 час 30 мин</p>
-        </div>
-      </div>
-    </section>
-  </main>
-  <!-- modal with overlay -->
-  <div class="modal-overlay">
-    <div class="modal-delete">
-      <p class="modal-delete__title">Удалить задачу?</p>
-      <button class="modal-delete__close-button"></button>
-      <button class="modal-delete__delete-button button-primary">Удалить</button>
-      <button class="modal-delete__cancel-button">Отмена</button>
-    </div>
-  </div>
+<!--            </li>-->
+<!--            <li class="pomodoro-tasks__list-task default">-->
+<!--              <span class="count-number">3</span>-->
+<!--              <button class="pomodoro-tasks__task-text">-->
+<!--                Проверить валидность-->
+<!--              </button>-->
+<!--              <button class="pomodoro-tasks__task-button"></button>-->
+<!--            </li>-->
+<!--          </ul>-->
+<!--          <p class="pomodoro-tasks__deadline-timer">1 час 30 мин</p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </section>-->
+<!--  </main>-->
+<!--  &lt;!&ndash; modal with overlay &ndash;&gt;-->
+<!--  <div class="modal-overlay">-->
+<!--    <div class="modal-delete">-->
+<!--      <p class="modal-delete__title">Удалить задачу?</p>-->
+<!--      <button class="modal-delete__close-button"></button>-->
+<!--      <button class="modal-delete__delete-button button-primary">Удалить</button>-->
+<!--      <button class="modal-delete__cancel-button">Отмена</button>-->
+<!--    </div>-->
+<!--  </div>-->
 </body>
 </html>
