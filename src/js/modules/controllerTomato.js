@@ -21,8 +21,11 @@ class ControllerTomato {
         document.querySelector('.pomodoro-tasks__quest-tasks').addEventListener('click', e => {
             const target = e.target;
             if (target.classList.contains('pomodoro-tasks__task-text')) {
-                this.tomato.activateTask(target.closest('.pomodoro-tasks__list-task').
+                console.log(target.closest('.pomodoro-tasks__list-task').
+                    dataset.id, 'yes')
+                this.tomato.activateTask(+target.closest('.pomodoro-tasks__list-task').
                     dataset.id);
+
             }
         });
 

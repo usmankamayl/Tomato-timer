@@ -1,8 +1,9 @@
 export class Task {
+    //id =  Math.random().toString().substring(2, 8) + Date.now().toString().substring(9);
     constructor(task) {
         this.task = task;
         this.task.title = task.title;
-        this.task.id = task.id;
+        this.task.id =  Math.random().toString().substring(2, 8) + Date.now().toString().substring(9);
         this.task.count = task.count;
         this.task.importance = task.importance || 'so-so';
     }

@@ -1,7 +1,7 @@
 import {StandardTask, ImportantTask, UnimportantTask} from "./tasks";
 
 export class Commands {
-    constructor(task = {}) {
+    constructor(task) {
         this.task = task;
     }
 
@@ -11,7 +11,7 @@ export class Commands {
 }
 
 export class CreateTask extends Commands {
-    constructor(task = {}) {
+    constructor(task) {
         super(task);
         this.task.importance = task.importance;
     }

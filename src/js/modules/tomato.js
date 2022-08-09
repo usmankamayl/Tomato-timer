@@ -14,12 +14,16 @@ export class Tomato {
 
     addTask (task = {}) {
         this.tasks.push(task);
+        console.log(task, ' added task');
+        console.log(this.tasks, ' tasks')
         this.page.createTask(task);
     }
 
     activateTask (id) {
-        const activateTask = this.tasks.find(task => task.id = id);
-        activateTask.task.status = true;
+        const activateTask = this.tasks.find(task => +task.task.id === id);
+        console.log(this.tasks, ' this.tasks');
+       console.log(activateTask, ' activateTask')
+        activateTask.status = true;
         this.page.setWindowTitle(activateTask.task.title);
     }
 
