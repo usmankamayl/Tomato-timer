@@ -21,15 +21,27 @@ class ControllerTomato {
         document.querySelector('.pomodoro-tasks__quest-tasks').addEventListener('click', e => {
             const target = e.target;
             if (target.classList.contains('pomodoro-tasks__task-text')) {
-                console.log(target.closest('.pomodoro-tasks__list-task').
-                    dataset.id, 'yes')
                 this.tomato.activateTask(+target.closest('.pomodoro-tasks__list-task').
                     dataset.id);
-
             }
+            if (target.closest('.burger-popup__delete-button')) {
+                this.tomato.tasks.forEach((task, i) => {
+                    if (task.id === target.closest('.pomodoro-tasks__list-task').dataset.id) {
+                        this.tomato.tasks.splice(i, 1);
+                    }
+                })
+                target.closest('.pomodoro-tasks__list-task').remove();
+            }
+
+
+            if (target.closest('.pomodoro-tasks__task-button')) {
+                target.nextSibling.classList.add('burger-popup_active');
+            }
+
         });
 
        this.setImportance();
+
     }
 
 
@@ -48,7 +60,7 @@ class ControllerTomato {
         return this.importance;
     }
 
-
+t
     renderTask() {
         this.tomato.addTask(new CreateTask({
             title:  this.taskTitle.value,
@@ -56,7 +68,6 @@ class ControllerTomato {
             count: this.tomato.tasks.length + 1,
         }
         ).execute());
-
     }
 
 }

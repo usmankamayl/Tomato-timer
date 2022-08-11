@@ -12,7 +12,7 @@ export class Tomato {
         Tomato._instance = this;
     }
 
-    addTask (task = {}) {
+    addTask (task) {
         this.tasks.push(task);
         console.log(task, ' added task');
         console.log(this.tasks, ' tasks')
@@ -23,7 +23,7 @@ export class Tomato {
         const activateTask = this.tasks.find(task => +task.task.id === id);
         console.log(this.tasks, ' this.tasks');
        console.log(activateTask, ' activateTask')
-        activateTask.status = true;
+        activateTask.task.status = true;
         this.page.setWindowTitle(activateTask.task.title);
     }
 

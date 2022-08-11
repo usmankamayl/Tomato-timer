@@ -126,7 +126,10 @@ class RenderTomato {
         const taskElement = el(`li.pomodoro-tasks__list-task`, [
             el('span.count-number', `${task.task.count}`),
             el('button.pomodoro-tasks__task-text', `${task.task.title}`),
-            el('button.pomodoro-tasks__task-button')
+            el('button.pomodoro-tasks__task-button'),
+            el('div.burger-popup ', [el('button.popup-button burger-popup__edit-button', 'Редактировать'),
+                el('button.popup-button burger-popup__delete-button', 'Удалить')
+            ])
         ]);
         taskElement.classList.add(task.task.importance);
         taskElement.dataset.id = task.task.id;
@@ -141,3 +144,4 @@ class RenderTomato {
 }
 
 export default RenderTomato;
+
